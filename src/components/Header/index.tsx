@@ -4,7 +4,7 @@ import TechList from "../TechList";
 
 export default function Header() {
   return (
-    <header className="flex flex-col mx-7 py-6 xl:m-auto lg:max-w-7xl lg:h-screen">
+    <header id="home" className="flex flex-col py-6 lg:h-screen">
       <Navbar />
       <div className="flex flex-col items-center">
         <h1 className="text-4xl font-bold text-center mt-16 dark:text-white lg:text-6xl lg:mt-40">
