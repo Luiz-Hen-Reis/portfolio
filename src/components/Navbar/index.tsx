@@ -8,8 +8,9 @@ export default function Navbar() {
     <div className="flex items-center justify-between">
       <h1 className="font-bold text-xl">Luiz Henrique</h1>
       <nav className="flex items-center gap-2">
-        <div className="hidden sm:flex items-center gap-3 mx-4 text-lg">
+        <div className="hidden sm:flex items-center gap-5 mx-4 text-lg">
           <a href="#home" className="hover:underline">Home</a>
+          <a href="#about" className="hover:underline">Sobre mim</a>
           <a href="#projects" className="hover:underline">Projetos</a>
         </div>
         <a href="https://github.com/Luiz-Hen-Reis" target="_blank">
@@ -24,7 +25,7 @@ export default function Navbar() {
         <a
           href="/files/cv.pdf"
           download="Luiz Henrique's CV"
-          className="hidden sm:inline-block bg-yellow-400 p-3 rounded dark:text-white text-sm shadow-md animate-pulse hover:animate-none"
+          className="hidden sm:inline-block bg-yellow-300 p-3 rounded dark:text-white text-sm shadow-md transition duration-300 animate-pulse hover:animate-none hover:bg-yellow-400"
         >
           Baixar meu CV &darr;
         </a>
