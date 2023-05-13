@@ -35,11 +35,6 @@
     alt: "TailwindCSS logo",
   },
   {
-    img: "/assets/html.svg",
-    title: "HTML",
-    alt: "HTML logo",
-  },
-  {
     img: "/assets/styled-components.svg",
     title: "Styled-components",
     alt: "Styled-components logo",
