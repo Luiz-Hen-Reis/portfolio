@@ -9,7 +9,7 @@ export default function Navbar() {
       <h1 className="font-bold text-xl">Luiz Henrique</h1>
       <nav className="flex items-center gap-2">
         <div className="hidden sm:flex items-center gap-5 mx-4 text-lg">
-          <a href="#about" className="hover:underline">Sobre mim</a>
+          <a href="#formation" className="hover:underline">Formação</a>
           <a href="#projects" className="hover:underline">Projetos</a>
         </div>
         <a href="https://github.com/Luiz-Hen-Reis" target="_blank" className="hover:animate-pulse">

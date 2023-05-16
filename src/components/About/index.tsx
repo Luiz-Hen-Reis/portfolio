@@ -1,12 +1,10 @@
-import CourseInfo from "../CourseInfor";
+import CourseInfo from "../CourseInfo";
 import SectionTitle from "../SectionTitle";
 
-export default function About() {
+export default function Formation() {
   return (
-    <section id="about" className="flex flex-col">
-      <SectionTitle>
-        Sobre <span className="text-yellow-400">Mim</span>
-      </SectionTitle>
+    <section id="formation" className="flex flex-col">
+      <SectionTitle>Formação</SectionTitle>
 
       <p className="text-sm text-zinc-400 lg:text-base">
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia in
@@ -41,11 +39,12 @@ export default function About() {
           period="Fevereiro de 2022/Fevereiro de 2023"
           bgColor
         />
+        <CourseInfo src='/assets/youtube.svg' alt="Youtube logo" title="Youtube" period="Sempre aprendendo algo novo" />
         <CourseInfo
           src="/assets/logo-udemy.svg"
           alt="Udemy logo"
           title="Udemy Academy"
-          period="Em andamento"
+          period="Sempre aprendendo algo novo"
         />
       </div>
     </section>

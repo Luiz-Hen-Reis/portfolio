@@ -69,30 +69,30 @@ const projects = [
         title: "Styled-components",
         alt: "Styled-components logo",
       },
+    ],
+  },
+  {
+    title: "Expense Tracker",
+    img: "/assets/expense-tracker.png",
+    alt: "Expense Tracker project",
+    githubLink: "https://github.com/Luiz-Hen-Reis/react_expense_tracker",
+    projectLink:
+      "https://react-expense-tracker-8hkyd9ekp-luiz-hen-reis.vercel.app/",
+    techs: [
       {
-        title: "Expense Tracker",
-        img: "/assets/expense-tracker.png",
-        alt: "Expense Tracker project",
-        githubLink: "https://github.com/Luiz-Hen-Reis/react_expense_tracker",
-        projectLink:
-          "https://react-expense-tracker-8hkyd9ekp-luiz-hen-reis.vercel.app/",
-        techs: [
-          {
-            img: "/assets/react.svg",
-            title: "React",
-            alt: "react logo",
-          },
-          {
-            img: "/assets/ts.svg",
-            title: "Typescript",
-            alt: "Typescript logo",
-          },
-          {
-            img: "/assets/css.svg",
-            title: "CSS",
-            alt: "CSS logo",
-          },
-        ],
+        img: "/assets/react.svg",
+        title: "React",
+        alt: "react logo",
+      },
+      {
+        img: "/assets/ts.svg",
+        title: "Typescript",
+        alt: "Typescript logo",
+      },
+      {
+        img: "/assets/css.svg",
+        title: "CSS",
+        alt: "CSS logo",
       },
     ],
   },
