@@ -1,7 +1,6 @@
 import { FolderSymlink, Github, Globe } from 'lucide-react'
 import SectionTitle from "@/components/SectionTitle";
 import TechItem from "@/components/TechItem";
-import Image from "next/image";
 import projects from '@/utils/projects';
 
 export default function Projects() {
@@ -14,7 +13,7 @@ export default function Projects() {
               <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-2 text-white">
                 {projects.map((project) => (
                   <article
-                    className="flex flex-col justify-center gap-2 w-full bg-zinc-400 dark:bg-zinc-700 px-2 py-4 rounded shadow-lg group"
+                    className="flex flex-col justify-center gap-2 bg-zinc-400 dark:bg-zinc-700 px-2 py-4 rounded shadow-lg group"
                     key={project.title}
                   >
                     <header>
@@ -25,11 +24,9 @@ export default function Projects() {
                       target="_blank"
                       className="relative"
                     >
-                      <Image
+                      <img
                         src={project.img}
-                        alt={project.alt}
-                        width={500}
-                        height={200}
+                        alt={project.alt} 
                         className="rounded"
                       />
                       <div className="absolute hidden group-hover:flex items-center justify-center group-hover:bg-slate-700/60 top-0 left-0 right-0 bottom-0 active:animate-pulse">
@@ -38,7 +35,7 @@ export default function Projects() {
                     </a>
                     <footer className="flex items-center justify-between mt-2">
                       <div>
-                        <ul className="flex items-center gap-1">
+                        <ul className="flex items-center gap-1 flex-wrap">
                           {project.techs.map((tech, index) => (
                             <TechItem title={tech.title} alt={tech.alt} small key={index} />
                           ))}

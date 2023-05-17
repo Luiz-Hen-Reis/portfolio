@@ -10,12 +10,10 @@ export default function Header() {
           Olá, sou Luiz Henrique
         </h1>
         <p className="text-justify text-gray-600 dark:text-gray-400 mt-6 font-serif text-2xl lg:mx-44">
-          I am a UI Engineer at Google, where I design and develop user-centered
-          interfaces for cutting-edge technology products. I work with a
-          talented team to create visually appealing and intuitive designs that
-          enhance user experience. I am passionate about using technology to
-          create beautiful and functional designs that solve real-world
-          problems.
+          Sou um desenvolvedor em formação Fullstack que busca sempre se
+          manter atualizado com as novas tecnologias e demandas do mercado.
+          Focado em criar aplicações onde o produto final seja pensado
+          exclusivamente no cliente/usuário final.
         </p>
         <TechList />
       </div>

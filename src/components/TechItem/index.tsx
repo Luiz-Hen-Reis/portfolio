@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 type Props = {
   img?: string;
   title: string;
@@ -13,7 +11,7 @@ export default function TechItem({ img, title, alt, small = false }: Props) {
       {!small && (
         <li className="flex items-center gap-2 p-2 bg-yellow-400 rounded-md text-center shadow-md group">
          {img && (
-            <Image
+            <img
               src={img}
               width={20}
               height={20}
@@ -29,7 +27,7 @@ export default function TechItem({ img, title, alt, small = false }: Props) {
       {small && (
         <li className="flex items-center p-2 bg-yellow-400 rounded-md text-center shadow-md group">
           {img && (
-            <Image
+            <img
               src={img}
               width={20}
               height={20}
