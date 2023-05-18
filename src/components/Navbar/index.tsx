@@ -15,7 +15,7 @@ export default function Navbar() {
         <a href="https://github.com/Luiz-Hen-Reis" target="_blank" className="hover:animate-pulse">
           <Github />
         </a>
-        <a href="https://www.linkedin.com/in/luiz-henrique-reis-barbosa/" target="_blank" className="hover:animate-bounce">
+        <a href="https://www.linkedin.com/in/luiz-henrique-reis-barbosa/" target="_blank" className="hover:animate-pulse">
           <Linkedin />
         </a>
         <button onClick={toggleDarkMode} className="hover:animate-spin active:animate-ping">

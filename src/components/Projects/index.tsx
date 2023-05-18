@@ -5,7 +5,7 @@ import projects from '@/utils/projects';
 
 export default function Projects() {
   return (
-    <section id="projects">
+    <section id="projects" className='mb-4'>
               <SectionTitle>
                 <span className="text-yellow-400">Meus</span> projetos
               </SectionTitle>

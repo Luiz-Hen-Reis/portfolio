@@ -1,6 +1,7 @@
 "use client";
 
 import { About, Header, Projects } from "@/components";
+import Footer from "@/components/Footer";
 import { useDarkModeContext } from "@/contexts/DarkModeContext";
 
 export default function Home() {
@@ -14,6 +15,7 @@ export default function Home() {
           <main>
             <About />
             <Projects />
+            <Footer />
           </main>
         </div>
       </div>
