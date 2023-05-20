@@ -1,8 +1,10 @@
 import { useDarkModeContext } from "@/contexts/DarkModeContext";
+import { useModalContext } from "@/contexts/ModalContext";
 import { Github, Sun, Moon, Menu, Linkedin } from "lucide-react";
 
 export default function Navbar() {
   const { darkMode, toggleDarkMode } = useDarkModeContext();
+  const { openModal } = useModalContext();
 
   return (
     <div className="flex items-center justify-between">
@@ -28,7 +30,7 @@ export default function Navbar() {
         >
           Baixar meu CV &darr;
         </a>
-        <button className="sm:hidden">
+        <button onClick={openModal} className="sm:hidden">
           <Menu />
         </button>
       </nav>

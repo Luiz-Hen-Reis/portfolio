@@ -1,5 +1,6 @@
 import Header from "./Header";
-import Formation from "./About";
+import Formation from "./Formation";
 import Projects from "./Projects";
+import Modal from "./Modal";
 
-export { Header, Formation as About, Projects };
+export { Header, Formation, Projects, Modal };

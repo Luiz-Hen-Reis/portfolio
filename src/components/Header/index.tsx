@@ -2,6 +2,8 @@ import Navbar from "../Navbar";
 import TechList from "../TechList";
 
 export default function Header() {
+
+
   return (
     <header id="home" className="flex flex-col py-6 lg:h-[80vh]">
       <Navbar />
