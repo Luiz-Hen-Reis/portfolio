@@ -1,6 +1,7 @@
 "use client";
 
 import {
+  ContactForm,
   Footer,
   Formation,
   Header,
@@ -28,6 +29,7 @@ export default function Home() {
           <main>
             <Formation />
             <Projects />
+            <ContactForm />
             <Footer />
           </main>
         </div>

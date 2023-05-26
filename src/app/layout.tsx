@@ -20,7 +20,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-BR">
-      <body className={`${sourceCodePro.className} bg-slate-200`}>
+      <body className={`${sourceCodePro.className} bg-slate-200 selection:bg-yellow-400`}>
         <DarkModeProvider>
           <ModalProvider>{children}</ModalProvider>
         </DarkModeProvider>

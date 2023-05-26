@@ -35,6 +35,12 @@ export default function Modal() {
             >
               Projetos
             </a>
+            <a
+              href="#contact"
+              className="w-full text-center bg-yellow-300 p-3 rounded dark:text-white text-sm shadow-md" onClick={closeModal}
+            >
+              Contato
+            </a>
           </nav>
           <Footer />
         </div>

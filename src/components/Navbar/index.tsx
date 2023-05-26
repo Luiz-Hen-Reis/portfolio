@@ -13,6 +13,7 @@ export default function Navbar() {
         <div className="hidden sm:flex items-center gap-5 mx-4 text-lg">
           <a href="#formation" className="hover:underline">Formação</a>
           <a href="#projects" className="hover:underline">Projetos</a>
+          <a href="#contact" className="hover:underline">Contato</a>
         </div>
         <a href="https://github.com/Luiz-Hen-Reis" target="_blank" className="hover:animate-pulse">
           <Github />
