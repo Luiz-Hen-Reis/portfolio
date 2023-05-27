@@ -1,3 +1,4 @@
+import Button from "../Button";
 import InputField from "../InputField";
 import SectionTitle from "../SectionTitle";
 
@@ -35,9 +36,7 @@ export default function ContactForm() {
           />
         </div>
 
-        <button className="w-full text-center bg-yellow-300 p-3 rounded dark:text-white text-sm shadow-md lg:w-52 hover:bg-yellow-400/40 active:animate-ping">
-          Enviar mensagem
-        </button>
+        <Button content="Enviar" />
       </form>
     </section>
   );

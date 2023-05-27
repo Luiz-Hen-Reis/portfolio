@@ -1,7 +1,7 @@
 type Props = {
   img?: string;
   title: string;
-  alt: string;
+  alt?: string;
   small?: boolean;
 };
 

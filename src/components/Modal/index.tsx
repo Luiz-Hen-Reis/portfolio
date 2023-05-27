@@ -1,6 +1,7 @@
 import { useModalContext } from "@/contexts/ModalContext";
 import { X } from "lucide-react";
 import Footer from "../Footer";
+import Button from "../Button";
 
 export default function Modal() {
   const { modalIsOpen, closeModal } = useModalContext();
@@ -16,31 +17,31 @@ export default function Modal() {
             </button>
           </header>
           <nav className="flex flex-col gap-6 justify-center items-center mt-12">
-            <a
+            <Button
+              content="Baixar meu CV &darr;"
               href="/files/cv.pdf"
+              onClick={closeModal}
+              anchorTag
               download="Luiz Henrique's CV"
-              className="w-full text-center bg-yellow-300 p-3 rounded dark:text-white text-sm shadow-md" onClick={closeModal}
-            >
-              Baixar meu CV &darr;
-            </a>
-            <a
+            />
+            <Button
+              content="Formação"
               href="#formation"
-              className="w-full text-center bg-yellow-300 p-3 rounded dark:text-white text-sm shadow-md" onClick={closeModal}
-            >
-              Formação
-            </a>
-            <a
+              onClick={closeModal}
+              anchorTag
+            />
+            <Button
+              content="Projetos"
               href="#projects"
-              className="w-full text-center bg-yellow-300 p-3 rounded dark:text-white text-sm shadow-md" onClick={closeModal}
-            >
-              Projetos
-            </a>
-            <a
+              onClick={closeModal}
+              anchorTag
+            />
+            <Button
+              content="Contato"
               href="#contact"
-              className="w-full text-center bg-yellow-300 p-3 rounded dark:text-white text-sm shadow-md" onClick={closeModal}
-            >
-              Contato
-            </a>
+              onClick={closeModal}
+              anchorTag
+            />
           </nav>
           <Footer />
         </div>

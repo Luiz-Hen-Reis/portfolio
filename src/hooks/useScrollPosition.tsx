@@ -4,11 +4,13 @@ export default function useScrollPosition() {
   const [scrollPosition, setScrollPosition] = useState(0);
 
   const listenToScrollEvent = () => {
-    document.addEventListener("scroll", () => {
-      requestAnimationFrame(() => {
-        calculateScrollDistance();
+    if (typeof window !== "undefined") {
+      document.addEventListener("scroll", () => {
+        requestAnimationFrame(() => {
+          calculateScrollDistance();
+        });
       });
-    });
+    }
   };
 
   const calculateScrollDistance = () => {
