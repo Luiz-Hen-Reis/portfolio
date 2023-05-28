@@ -5,7 +5,7 @@ export default function Header() {
 
 
   return (
-    <header id="home" className="flex flex-col py-6 lg:h-[80vh]">
+    <header id="home" className="flex flex-col lg:h-[80vh]">
       <Navbar />
       <div className="flex flex-col items-center">
         <h1 className="text-4xl font-bold text-center mt-14 dark:text-white lg:text-6xl lg:mt-40 animate-bounce transition duration-300 hover:underline">

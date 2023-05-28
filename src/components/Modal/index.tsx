@@ -4,9 +4,11 @@ import { useModalContext } from "@/contexts/ModalContext";
 import { X } from "lucide-react";
 import Footer from "../Footer";
 import Button from "../Button";
+import { usePathname } from "next/navigation";
 
 export default function Modal() {
   const { modalIsOpen, closeModal } = useModalContext();
+  const pathname = usePathname();
 
   return (
     <>
@@ -26,6 +28,17 @@ export default function Modal() {
               anchorTag
               download="Luiz Henrique's CV"
             />
+            {pathname === "/" && (
+              <Button
+                content="Sobre mim"
+                href="/about"
+                onClick={closeModal}
+                anchorTag
+              />
+            )}
+            {pathname === "/about" && (
+              <Button content="Home" href="/" onClick={closeModal} anchorTag />
+            )}
             <Button
               content="Formação"
               href="#formation"
