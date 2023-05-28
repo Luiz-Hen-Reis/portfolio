@@ -4,6 +4,7 @@ import SectionTitle from "../SectionTitle";
 import { useForm } from "react-hook-form";
 import { toast } from "react-toastify";
 import { useDarkModeContext } from "@/contexts/DarkModeContext";
+import { useState } from "react";
 
 type FormValues = {
   name: string;
@@ -12,25 +13,31 @@ type FormValues = {
 };
 
 export default function ContactForm() {
+  const [isLoading, setIsLoading] = useState(false);
   const { darkMode } = useDarkModeContext();
 
   const {
     handleSubmit,
     register,
     formState: { errors },
-    setValue,
+    reset,
   } = useForm<FormValues>();
 
   const handleSubmitForm = handleSubmit(async (data) => {
-    await sendContactForm(data);
+    try {
+      setIsLoading(true);
+      await sendContactForm(data);
+      reset();
+      setIsLoading(false);
 
-    setValue("name", "");
-    setValue("subject", "");
-    setValue("message", "");
-    toast.success("Mensagem enviada com sucesso!  😁", {
-      position: "top-center",
-      theme: `${darkMode ? "dark" : "light"}`,
-    });
+      toast.success("Mensagem enviada com sucesso!  😁", {
+        position: "top-center",
+        theme: `${darkMode ? "dark" : "light"}`,
+        autoClose: 2000,
+      });
+    } catch (error) {
+      toast.error(`${error}`);
+    }
   });
 
   return (
@@ -41,10 +48,13 @@ export default function ContactForm() {
 
       <form className="flex flex-col gap-4" onSubmit={handleSubmitForm}>
         <div className="flex flex-col gap-2">
-          <label htmlFor="name">Seu nome</label>
+          <label htmlFor="name">
+            Seu nome <span className="text-red-600">*</span>
+          </label>
           <input
             type="text"
             id="name"
+            disabled={isLoading}
             className={`h-12 p-2 rounded outline-none shadow-md lg:w-2/4 dark:text-black dark:bg-slate-200 ${
               errors.name?.message ? "border border-red-600" : ""
             }`}
@@ -57,10 +67,13 @@ export default function ContactForm() {
         </div>
 
         <div className="flex flex-col gap-2">
-          <label htmlFor="subject">Assunto</label>
+          <label htmlFor="subject">
+            Assunto <span className="text-red-600">*</span>
+          </label>
           <input
             type="text"
             id="subject"
+            disabled={isLoading}
             className={`h-12 p-2 rounded outline-none shadow-md lg:w-2/4 dark:text-black dark:bg-slate-200 ${
               errors.subject?.message ? "border border-red-600" : ""
             }`}
@@ -73,12 +86,15 @@ export default function ContactForm() {
         </div>
 
         <div className="flex flex-col gap-2">
-          <label htmlFor="message">Escreva sua mensagem</label>
+          <label htmlFor="message">
+            Escreva sua mensagem <span className="text-red-600">*</span>
+          </label>
           <textarea
             id="message"
             cols={30}
             rows={10}
             placeholder="Sua mensagem..."
+            disabled={isLoading}
             className={`outline-none shadow-md p-2 rounded lg:w-3/4 dark:text-black dark:bg-slate-200 ${
               errors.message?.message ? "border border-red-600" : ""
             }`}
@@ -89,7 +105,8 @@ export default function ContactForm() {
           <p className="text-sm text-red-600">{errors.message?.message}</p>
         </div>
 
-        <Button content="Enviar" />
+        {!isLoading && <Button content="Enviar" />}
+        {isLoading && <Button content="Enviando..." isLoading />}
       </form>
     </section>
   );
