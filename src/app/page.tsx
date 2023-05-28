@@ -10,6 +10,9 @@ import {
   Projects,
 } from "@/components";
 
+import "react-toastify/dist/ReactToastify.css";
+import { ToastContainer } from "react-toastify";
+
 import { useDarkModeContext } from "@/contexts/DarkModeContext";
 import useScrollPosition from "@/hooks/useScrollPosition";
 
@@ -34,6 +37,7 @@ export default function Home() {
           </main>
         </div>
       </div>
+      <ToastContainer />
     </div>
   );
 }

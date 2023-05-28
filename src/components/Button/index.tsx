@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 type Props = {
   href?: string;
   onClick?: () => void;
@@ -16,19 +18,17 @@ export default function Button({
   return (
     <>
       {!anchorTag && (
-        <button className="w-full text-center bg-yellow-300 p-3 rounded dark:text-white text-sm shadow-md lg:w-52 hover:bg-yellow-400/40 active:animate-ping">
-          {content}
-        </button>
+        <input type="submit" value={content} className="cursor-pointer w-full text-center bg-yellow-300 p-3 rounded dark:text-white text-sm shadow-md lg:w-52 hover:bg-yellow-400/40 active:animate-ping" />
       )}
-      {anchorTag && (
-        <a
+      {anchorTag && href && (
+        <Link
           href={href}
           download={download ?? download}
           className="w-full text-center bg-yellow-300 p-3 rounded dark:text-white text-sm shadow-md"
           onClick={onClick}
         >
           {content}
-        </a>
+        </Link>
       )}
     </>
   );

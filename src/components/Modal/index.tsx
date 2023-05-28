@@ -1,3 +1,5 @@
+"use client";
+
 import { useModalContext } from "@/contexts/ModalContext";
 import { X } from "lucide-react";
 import Footer from "../Footer";
