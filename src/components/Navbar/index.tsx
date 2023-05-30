@@ -36,7 +36,9 @@ export default function Navbar({ secondaryPage }: Props) {
 
         {secondaryPage && (
           <div className="hidden sm:flex items-center gap-5 mx-4 text-lg">
-            <Link href="/">Home</Link>
+            <Link href="/" className="hover:underline">
+              Home
+            </Link>
             <Link
               href="/about"
               className={`${

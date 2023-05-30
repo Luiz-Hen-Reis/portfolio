@@ -7,6 +7,7 @@ import ProgressBar from "./ProgressBar";
 import ContactForm from "./ContactForm";
 import Navbar from "./Navbar";
 import Wrapper from "./Wrapper";
+import { DynamicModal } from "./DynamicModal";
 
 export {
   Header,
@@ -18,4 +19,5 @@ export {
   ContactForm,
   Navbar,
   Wrapper,
+  DynamicModal
 };

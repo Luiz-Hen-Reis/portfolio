@@ -2,6 +2,7 @@
 
 import {
   ContactForm,
+  DynamicModal,
   Footer,
   Formation,
   Header,
@@ -14,17 +15,20 @@ import {
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer } from "react-toastify";
 import useScrollPosition from "@/hooks/useScrollPosition";
+import { useEffect } from "react";
 
 export default function Home() {
   const { listenToScrollEvent, scrollPosition } = useScrollPosition();
 
-  listenToScrollEvent();
+  useEffect(() => {
+    listenToScrollEvent();
+  }, []);
 
   return (
     <>
       <ProgressBar percent={scrollPosition} />
       <Wrapper>
-        <Modal />
+        <DynamicModal />
         <Header />
         <main>
           <Formation />
