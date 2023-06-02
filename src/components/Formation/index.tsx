@@ -6,7 +6,7 @@ export default function Formation() {
     <section id="formation" className="flex flex-col lg:my-32 xl:mt-0">
       <SectionTitle>Formação</SectionTitle>
 
-      <div className="flex flex-col md:flex-row lg:justify-between lg:items-start lg:gap-4 mt-4">
+      <div className="flex flex-col md:flex-row lg:justify-between lg:items-start lg:gap-4 mt-4 border-l-4 border-yellow-400 md:border-l-0 md:border-t-4">
         <CourseInfo
           src="/assets/unip.svg"
           alt="UNIP logo"

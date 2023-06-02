@@ -18,24 +18,29 @@ export default function CourseInfo({
   description,
 }: Props) {
   return (
-    <article className="flex-1">
-      <div className="flex items-center gap-4 my-4 flex-1">
-        <Image
-          src={src}
-          width={50}
-          height={50}
-          alt={alt}
-          className={`${bgColor ? "bg-slate-800" : ""} p-1 rounded`}
-        />
-
-        <div className="flex flex-col gap-2">
-          <strong>{title}</strong>
-          <sub className="text-xs">{period}</sub>
+    <article className="flex items-center gap-4 md:flex-col flex-1 ml-[-.8rem] md:mt-[-.8rem]">
+        <div className="border-8 border-yellow-400 rounded-full w-6 h-6">
+          <div className="w-2 h-2 rounded-full bg-black"></div>
         </div>
+      <div className="flex-1">
+        <div className="flex items-center gap-4 my-4 flex-1">
+          <Image
+            src={src}
+            width={50}
+            height={50}
+            alt={alt}
+            className={`${bgColor ? "bg-slate-800" : ""} p-1 rounded`}
+          />
+
+          <div className="flex flex-col gap-2">
+            <strong>{title}</strong>
+            <sub className="text-xs">{period}</sub>
+          </div>
+        </div>
+        <strong className="text-zinc-500 text-sm lg:text-base">
+          <span className="text-black">&#187;</span> {description}
+        </strong>
       </div>
-      <strong className="text-zinc-500 text-sm lg:text-base">
-        <span className="text-black">&#187;</span> {description}
-      </strong>
     </article>
   );
 }
