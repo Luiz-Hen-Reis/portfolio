@@ -37,9 +37,9 @@ export default function CourseInfo({
             <sub className="text-xs">{period}</sub>
           </div>
         </div>
-        <strong className="text-zinc-500 text-sm lg:text-base">
+        <p className="text-sm lg:text-base">
           <span className="text-black">&#187;</span> {description}
-        </strong>
+        </p>
       </div>
     </article>
   );

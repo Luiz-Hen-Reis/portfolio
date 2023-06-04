@@ -4,9 +4,8 @@ import {
   ContactForm,
   DynamicModal,
   Footer,
-  Formation,
+  MyJourney,
   Header,
-  Modal,
   ProgressBar,
   Projects,
   Wrapper,
@@ -16,7 +15,6 @@ import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer } from "react-toastify";
 import useScrollPosition from "@/hooks/useScrollPosition";
 import { useEffect } from "react";
-import Image from "next/image";
 
 export default function Home() {
   const { listenToScrollEvent, scrollPosition } = useScrollPosition();
@@ -32,16 +30,7 @@ export default function Home() {
         <DynamicModal />
         <Header />
         <main>
-          <section>
-            <Image
-              src="/assets/me.jpg"
-              width={400}
-              height={400}
-              alt="Luiz Henrique's picture"
-              className="md:m-10 rounded-full shadow-md"
-            />
-          </section>
-          <Formation />
+          <MyJourney />
           <Projects />
           <ContactForm />
           <Footer />

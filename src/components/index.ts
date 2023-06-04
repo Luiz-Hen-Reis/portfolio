@@ -1,5 +1,5 @@
 import Header from "./Header";
-import Formation from "./Formation";
+import MyJourney from "./MyJourney";
 import Projects from "./Projects";
 import Modal from "./Modal";
 import Footer from "./Footer";
@@ -11,7 +11,7 @@ import { DynamicModal } from "./DynamicModal";
 
 export {
   Header,
-  Formation,
+  MyJourney,
   Projects,
   Modal,
   Footer,

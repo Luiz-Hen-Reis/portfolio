@@ -4,12 +4,7 @@ import { Github, Sun, Moon, Menu, Linkedin } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-type Props = {
-  secondaryPage?: boolean;
-};
-
-export default function Navbar({ secondaryPage }: Props) {
-  const pathname = usePathname();
+export default function Navbar() {
   const { darkMode, toggleDarkMode } = useDarkModeContext();
   const { openModal } = useModalContext();
 
@@ -17,38 +12,18 @@ export default function Navbar({ secondaryPage }: Props) {
     <nav className="flex items-center justify-between">
       <h1 className="font-bold text-xl">Luiz Henrique</h1>
       <nav className="flex items-center gap-2">
-        {!secondaryPage && (
-          <div className="hidden sm:flex items-center gap-5 mx-4 text-lg">
-            <Link href="/about" className="hover:underline">
-              Sobre mim
-            </Link>
-            <Link href="#formation" className="hover:underline">
-              Formação
-            </Link>
-            <Link href="#projects" className="hover:underline">
-              Projetos
-            </Link>
-            <Link href="#contact" className="hover:underline">
-              Contato
-            </Link>
-          </div>
-        )}
+        <div className="hidden sm:flex items-center gap-5 mx-4 text-lg">
+          <Link href="#MyJourney" className="hover:underline">
+            Minha Jornada
+          </Link>
+          <Link href="#projects" className="hover:underline">
+            Projetos
+          </Link>
+          <Link href="#contact" className="hover:underline">
+            Contato
+          </Link>
+        </div>
 
-        {secondaryPage && (
-          <div className="hidden sm:flex items-center gap-5 mx-4 text-lg">
-            <Link href="/" className="hover:underline">
-              Home
-            </Link>
-            <Link
-              href="/about"
-              className={`${
-                pathname === "/about" ? "text-yellow-400 underline" : ""
-              }`}
-            >
-              Sobre mim
-            </Link>
-          </div>
-        )}
         <Link
           href="https://github.com/Luiz-Hen-Reis"
           target="_blank"
