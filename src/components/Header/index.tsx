@@ -6,7 +6,7 @@ export default function Header() {
   return (
     <header id="home" className="flex flex-col lg:h-[80vh]">
       <Navbar />
-      <div className="flex flex-col mt-10">
+      <div className="flex flex-col mt-10 animate-on-scroll">
         <div className="flex flex-col md:flex-row items-center justify-center">
           <div className="flex-1 flex items-center justify-center gap-4">
             <Image

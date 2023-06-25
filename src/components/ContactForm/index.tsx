@@ -1,3 +1,5 @@
+"use client"
+
 import sendContactForm from "@/server/sendContactForm";
 import Button from "../Button";
 import SectionTitle from "../SectionTitle";
@@ -41,7 +43,7 @@ export default function ContactForm() {
   });
 
   return (
-    <section className="mb-32" id="contact">
+    <section className="mb-32 animate-on-scroll" id="contact">
       <SectionTitle>
         Mande-me uma <span className="text-yellow-400">mensagem</span>
       </SectionTitle>
@@ -55,9 +57,8 @@ export default function ContactForm() {
             type="text"
             id="name"
             disabled={isLoading}
-            className={`h-12 p-2 rounded outline-none shadow-md lg:w-2/4 dark:text-black dark:bg-slate-200 ${
-              errors.name?.message ? "border border-red-600" : ""
-            }`}
+            className={`h-12 p-2 rounded outline-none shadow-md lg:w-2/4 dark:text-black dark:bg-slate-200 ${errors.name?.message ? "border border-red-600" : ""
+              }`}
             placeholder="seu nome..."
             {...register("name", {
               required: { value: true, message: "Informe seu nome *" },
@@ -74,9 +75,8 @@ export default function ContactForm() {
             type="text"
             id="subject"
             disabled={isLoading}
-            className={`h-12 p-2 rounded outline-none shadow-md lg:w-2/4 dark:text-black dark:bg-slate-200 ${
-              errors.subject?.message ? "border border-red-600" : ""
-            }`}
+            className={`h-12 p-2 rounded outline-none shadow-md lg:w-2/4 dark:text-black dark:bg-slate-200 ${errors.subject?.message ? "border border-red-600" : ""
+              }`}
             placeholder="Assunto..."
             {...register("subject", {
               required: { value: true, message: "Informe o assunto *" },
@@ -95,9 +95,8 @@ export default function ContactForm() {
             rows={10}
             placeholder="Sua mensagem..."
             disabled={isLoading}
-            className={`outline-none shadow-md p-2 rounded lg:w-3/4 dark:text-black dark:bg-slate-200 ${
-              errors.message?.message ? "border border-red-600" : ""
-            }`}
+            className={`outline-none shadow-md p-2 rounded lg:w-3/4 dark:text-black dark:bg-slate-200 ${errors.message?.message ? "border border-red-600" : ""
+              }`}
             {...register("message", {
               required: { value: true, message: "Escreva uma mensagem *" },
             })}

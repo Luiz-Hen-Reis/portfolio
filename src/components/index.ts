@@ -19,5 +19,5 @@ export {
   ContactForm,
   Navbar,
   Wrapper,
-  DynamicModal
+  DynamicModal,
 };

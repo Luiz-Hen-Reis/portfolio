@@ -1,10 +1,9 @@
-import Image from "next/image";
 import CourseInfo from "../CourseInfo";
 import SectionTitle from "../SectionTitle";
 
 export default function MyJourney() {
   return (
-    <section id="MyJourney" className="flex flex-col lg:my-32 xl:mt-0">
+    <section id="MyJourney" className="flex flex-col lg:my-32 xl:mt-0 animate-on-scroll from-left">
       <SectionTitle>Minha jornada</SectionTitle>
 
       <div className="flex flex-col md:flex-row lg:justify-between lg:items-start lg:gap-6 mt-4 border-l-4 border-yellow-400 md:border-l-0 md:border-t-4">
